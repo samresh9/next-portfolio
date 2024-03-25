@@ -27,7 +27,7 @@ export default function Nav() {
 
   const isActive = (path: string) => path === pathname;
   const activeClass = (path: string) =>
-    path === pathname ? "text-pink-600" : "foreground";
+    path === pathname ? "text-blue-600" : "foreground";
 
   return (
     <Navbar
@@ -50,7 +50,7 @@ export default function Nav() {
             aria-current={isActive("/") ? "page" : false}
             onClick={() => handleMenu(false)}
           >
-            webdevkalo
+          LOGO
           </Link>
         </NavbarBrand>
         <NavbarItem className="ml-2">{/* // <ThemeSwitcher /> */}</NavbarItem>
