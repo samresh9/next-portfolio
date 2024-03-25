@@ -6,13 +6,14 @@ import {
   CardFooter,
   Chip,
   Link,
+  Divider,
 } from "@nextui-org/react";
 import Image from "next/image";
 type ExtendedProjectProps = ProjectDataProps & { setSizes?: boolean };
 export default function Project(projectData: ExtendedProjectProps) {
-  const { attributes } = projectData;
+  const { attributes, divider } = projectData;
   const { name, description, liveUrl, sourceCodeUrl } = attributes;
-  const { url, alternativeText, formats} =
+  const { url, alternativeText, formats } =
     attributes.projectImage.data?.attributes;
   const { height, width } = formats?.medium;
   return (
@@ -68,6 +69,9 @@ export default function Project(projectData: ExtendedProjectProps) {
           </div>
         </CardBody>
       </Card>
+      {divider && (
+        <Divider className="my-20 bg-gradient-to-l from-pink-300 via-purple-300 to-indigo-400" />
+      )}
     </>
   );
 }

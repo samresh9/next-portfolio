@@ -63,4 +63,5 @@ type ProjectAttributes = {
 export type ProjectDataProps = {
   id: number;
   attributes: ProjectAttributes;
+  divider?: boolean;
 };

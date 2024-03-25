@@ -20,7 +20,10 @@ export const getProjects = async () => {
 export const getBlogs = async () => {
   try {
     const res = await fetch(
-      "http://localhost:1337/api/blogs?sort=createdAt:desc&fields[0]=title&fields[1]=description&fields[2]=date&fields[3]=readTime&fields[4]=slug&fields[5]=featured&fields[6]=updatedAt&populate[0]=imgUrl"
+      "http://localhost:1337/api/blogs?sort=createdAt:desc&fields[0]=title&fields[1]=description&fields[2]=date&fields[3]=readTime&fields[4]=slug&fields[5]=featured&fields[6]=updatedAt&populate[0]=imgUrl",
+      {
+        cache: "no-store",
+      }
     );
     if (!res.ok) {
       throw new Error("Failed to fetch the data");
@@ -37,7 +40,10 @@ export const getBlogs = async () => {
 export const getBlogArticle = async (slug: string) => {
   try {
     const res = await fetch(
-      `http://localhost:1337/api/blogs?filters[slug][$eq]=${slug}&populate=*`
+      `http://localhost:1337/api/blogs?filters[slug][$eq]=${slug}&populate=*`,
+      {
+        cache: "no-store",
+      }
     );
     if (!res.ok) {
       throw new Error("Failed to fetch data");

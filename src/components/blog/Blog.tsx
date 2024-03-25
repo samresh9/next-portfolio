@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Blog(blogData: any) {
+  console.log(blogData)
   const { attributes: blog } = blogData;
   const { url, alternativeText, formats } = blog?.imgUrl.data.attributes ?? {};
   const { width, height } = formats?.medium ?? {};
-  console.log(blog.imgUrl.data.attributes.formats.medium.width)
   return (
     <>
       <Link href={`/blog/${blog?.slug || ""}`}>

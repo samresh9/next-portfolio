@@ -7,18 +7,19 @@ export const Showcase = () => {
       <div className="md:flex flex-row-reverse gap-4 p-2">
         <div className="flex flex-1 gap-4  mb-5">
           <Image
-            src="/images/sLogoo.png"
-            width={500}
-            height={500}
+            src="/images/sl.png"
+            width={400}
+            height={400}
             alt="image"
             sizes="100vw"
+            quality={90}
             className="w-full h-auto object-contain mb-12 rounded-b-full"
           />
         </div>
         <div className="flex-1 pt-5 md:pt-32">
           <div className="flex flex-col lg:pr-28">
             <h1 className="text-3xl md:text-4xl !leading-relaxed mb-5">
-              I am Samresh, I like{" "}
+              I am ..., I like{" "}
               <span className="font-bold text-blue-700">coding</span> and
               sharing my experiences in the world of web development
             </h1>

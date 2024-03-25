@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/container/Container";
 import { Chip } from "@nextui-org/react";
 import Image from "next/image";
+import BlockRendererClient from "@/components/blockRenderer/BlockRenderer";
 
 export default async function BlogArticle({
   params,
@@ -15,7 +16,7 @@ export default async function BlogArticle({
   if (article.error) {
     notFound();
   }
-  const { title, description, date, readTime, imgUrl } =
+  const { title, description, date, readTime, imgUrl , content} =
     article?.data[0].attributes;
   const { url, alternativeText, width, height } = imgUrl.data.attributes;
   return (
@@ -42,10 +43,9 @@ export default async function BlogArticle({
           />
         </header>
         <article className="max-w-screen-md m-auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius porro
-          similique labore ea laboriosam? Eligendi nat us pariatur
-          necessitatibus cumque porro optio, sunt iure alias laboriosam harum,
-          amet autem totam hic.
+          <div className="prose prose-lg break-words text-primary prose-headings:text-secondary prose-strong:text-primary dark:prose-blockquote:text-slate-300 bg-code dark:prose-a:text-blue-700">
+          <BlockRendererClient content={content} />
+          </div>
         </article>
       </Container>
     </>
