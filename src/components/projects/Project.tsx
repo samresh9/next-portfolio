@@ -40,12 +40,12 @@ export default function Project(projectData: ExtendedProjectProps) {
           <h1 className="text-2xl font-bold mb-4">{name}</h1>
           <p className="mb-8">{description}</p>
           <div className="flex mt-auto flex-wrap gap-2 mb-6">
-            {attributes.stack.map((s: any) => (
+            {attributes.stacks.data.map((s: any) => (
               <Chip
                 className="bg-blue-600 text-white dark:bg-teal-400/10 dark:text-teal-300"
                 key={s}
               >
-                {s}
+                {s.attributes.name}
               </Chip>
             ))}
           </div>

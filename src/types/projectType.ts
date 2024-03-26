@@ -48,6 +48,19 @@ type ProjectImage = {
   };
 };
 
+type Stacks = {
+  data: [
+    {
+      id: number;
+      attributes: {
+        name: string;
+        createdAt: string;
+        updatedAt: string;
+        publishedAt:string;
+      };
+    }
+  ];
+};
 type ProjectAttributes = {
   createdAt: string;
   updatedAt: string;
@@ -58,6 +71,7 @@ type ProjectAttributes = {
   liveUrl: string;
   sourceCodeUrl: string;
   projectImage: ProjectImage;
+  stacks:Stacks
 };
 
 export type ProjectDataProps = {
