@@ -34,7 +34,7 @@ export default async function BlogArticle({
             </div>
           </div>
           <Image
-            src={`http://localhost:1337${url}`}
+            src={url}
             alt={alternativeText || "blog image"}
             width={width}
             height={height}

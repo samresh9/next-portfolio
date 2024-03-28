@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Blog(blogData: any) {
-  console.log(blogData)
+  console.log(blogData);
   const { attributes: blog } = blogData;
   const { url, alternativeText, formats } = blog?.imgUrl.data.attributes ?? {};
-  const { width, height } = formats?.medium ?? {};
+  const { width, height } = formats?.medium ?? formats.small;
   return (
     <>
       <Link href={`/blog/${blog?.slug || ""}`}>
@@ -18,10 +18,10 @@ export default function Blog(blogData: any) {
             <Image
               alt={alternativeText || "blog image"}
               className="object-cover rounded-xl w-full m-auto flex"
-            //   style={{
-            //     aspectRatio: "1.75/1",
-            //   }}
-              src={`http://localhost:1337${url}`}
+              //   style={{
+              //     aspectRatio: "1.75/1",
+              //   }}
+              src={ url}
               width={width}
               height={height}
             />

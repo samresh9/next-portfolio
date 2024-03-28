@@ -26,7 +26,7 @@ export default function Project(projectData: ExtendedProjectProps) {
         <CardHeader className="flex-2">
           <Image
             alt="cover"
-            src={`http://localhost:1337${url}`}
+            src={url}
             width={width}
             height={height}
             sizes={

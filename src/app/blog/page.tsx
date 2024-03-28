@@ -4,6 +4,9 @@ import { getBlogs } from "@/strapi/project";
 
 export default async function BlogsPage() {
   const blogs: any = await getBlogs();
+  if(blogs.error){
+    throw new Error("The blog is currently on a break. We'll be back soon with fresh content and insightful discussions.")
+  }
   console.log(blogs)
   return (
     <>
