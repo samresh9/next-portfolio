@@ -8,7 +8,7 @@ export default  async function TechBackground() {
     <article>
       <code className="text-medium inline-block mb-5">Skills</code>
       <Skills {...skills} />
-
+{/* comment */}
       <Divider className="my-12 max-w-screen-md" />
     </article>
   );
