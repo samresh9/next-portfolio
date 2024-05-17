@@ -18,7 +18,7 @@ export default async function Home() {
         <Projects projects={projects} />
 
         <h2 className="text-3xl mb-12 font-mono tracking-wide mt-20">
-          Latest Articles
+           Articles
         </h2>
 
         <section>
