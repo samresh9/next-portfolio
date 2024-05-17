@@ -1,5 +1,5 @@
 import Skills from "@/components/skills/skills";
-import { getAllStacks } from "@/strapi/project";
+import { getAllStacks } from "@/strapi/serverCall";
 import { Divider } from "@nextui-org/react";
 
 export default  async function TechBackground() {

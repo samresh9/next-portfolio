@@ -1,6 +1,6 @@
 import { Container } from "@/components/container/Container";
 import Project from "@/components/projects/Project";
-import { getProjects } from "@/strapi/project";
+import { getProjects } from "@/strapi/serverCall";
 import { ProjectDataProps } from "@/types/projectType";
 
 export default async function ProjectsPage() {

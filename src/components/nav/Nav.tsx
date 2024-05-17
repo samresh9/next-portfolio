@@ -50,7 +50,7 @@ export default function Nav() {
             aria-current={isActive("/") ? "page" : false}
             onClick={() => handleMenu(false)}
           >
-          LOGO
+          SMRES
           </Link>
         </NavbarBrand>
         <NavbarItem className="ml-2">{/* // <ThemeSwitcher /> */}</NavbarItem>
@@ -64,7 +64,7 @@ export default function Nav() {
             className={`font-bold text-2xl ${activeClass("/")}`}
             aria-current={isActive("/") ? "page" : false}
           >
-            LOGO
+            SMRES
           </Link>
         </NavbarBrand>
       </NavbarContent>

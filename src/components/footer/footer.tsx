@@ -3,8 +3,8 @@ import { Container } from "../container/Container";
 import { GithubIcon, LinkedInIcon } from "@/components/icons/Icons";
 
 const paths = [
-  //   { name: "Terms of Service (in Progress)", href: "#" },
-  //   { name: "Privacy (in Progress)", href: "#" },
+    { name: "Blogs", href: "/blog" },
+    { name: "Projects", href: "/projects" },
   { name: "About", href: "/about" },
 ];
 export const Footer = () => {
@@ -27,7 +27,7 @@ export const SectionLinks = () => {
       <div className="md:flex gap-56">
         {/* Title */}
         <div>
-          <h3 className="text-xl sm:text-2xl mb-3 font-bold">Lorem Ipsum</h3>
+          <h3 className="text-xl sm:text-2xl mb-3 font-bold">SMRES</h3>
 
           <div className="flex gap-2 items-center mb-10">
             <Link
@@ -38,7 +38,7 @@ export const SectionLinks = () => {
               <GithubIcon />
             </Link>
             <Link
-              href="https://github.com/Samresh9"
+              href="https://www.linkedin.com/in/samresh9"
               target="_blank"
               rel="linkedin"
             >
@@ -78,7 +78,7 @@ export const Aside = () => {
         href="mailto:thapasamresh9@gmail.com"
         className="hover:text-pink-700 transition-all"
       >
-        <div className="flex gap-2 mb-5">lorem@gmail.com</div>
+        <div className="flex gap-2 mb-5">thapasamresh9@gmail.com</div>
       </Link>
     </aside>
   );
@@ -87,7 +87,7 @@ export const Aside = () => {
 export const Rights = () => {
   return (
     <div className="text-small mt-10">
-      &copy; {new Date().getFullYear()} samresh. All Rights Reserved
+      &copy; {new Date().getFullYear()} smres. 
     </div>
   );
 };

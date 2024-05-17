@@ -1,4 +1,5 @@
 import { Image } from "@nextui-org/react";
+import { Github } from "./components/Github";
 
 export const UserHeader = () => {
   return (
@@ -10,7 +11,7 @@ export const UserHeader = () => {
             isBlurred
             radius="full"
             width={130}
-            src="/images/back.png"
+            src="/images/linkden.jpeg"
             alt="NextUI Album Cover"
             className="m-5"
           />
@@ -23,7 +24,7 @@ export const UserHeader = () => {
             {/* <CheckMark /> */}
           </div>
 
-          {/* <Github link="https://github.com/flnx" /> */}
+          <Github link="https://github.com/samresh9" />
         </section>
       </div>
     </header>

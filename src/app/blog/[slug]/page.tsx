@@ -1,4 +1,4 @@
-import { getBlogArticle } from "@/strapi/project";
+import { getBlogArticle } from "@/strapi/serverCall";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/container/Container";
 import { Chip } from "@nextui-org/react";

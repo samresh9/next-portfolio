@@ -1,6 +1,6 @@
 import Blog from "@/components/blog/Blog";
 import { Container } from "@/components/container/Container";
-import { getBlogs } from "@/strapi/project";
+import { getBlogs } from "@/strapi/serverCall";
 
 export default async function BlogsPage() {
   const blogs: any = await getBlogs();

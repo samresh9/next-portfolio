@@ -1,6 +1,6 @@
 import { Container } from "@/components/container/Container";
 import { Showcase } from "@/components/showcase/Showcase";
-import { getBlogs, getProjects } from "@/strapi/project";
+import { getBlogs, getProjects } from "@/strapi/serverCall";
 import Projects from "@/components/projects/Projects";
 import { ProjectDataProps } from "@/types/projectType";
 import Blog from "@/components/blog/Blog";

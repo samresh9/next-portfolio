@@ -15,7 +15,7 @@ export default function Project(projectData: ExtendedProjectProps) {
   const { name, description, liveUrl, sourceCodeUrl } = attributes;
   const { url, alternativeText, formats } =
     attributes.projectImage.data?.attributes;
-  const { height, width } = formats?.medium;
+  const { height, width } = formats?.medium || formats?.small;
   return (
     <>
       <Card
