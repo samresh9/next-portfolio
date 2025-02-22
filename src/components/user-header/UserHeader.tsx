@@ -20,7 +20,7 @@ export const UserHeader = () => {
         {/* Profile Info Section */}
         <section className="w-full mt-2 md:h-14 sm:flex sm:items-center">
           <div className="flex gap-2 items-center mb-8 sm:mb-0 sm:ml-11">
-            <h2 className="text-2xl">Lorem Ipsum</h2>
+            <h2 className="text-2xl">Samresh Thapa</h2>
             {/* <CheckMark /> */}
           </div>
 

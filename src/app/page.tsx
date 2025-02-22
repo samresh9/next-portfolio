@@ -23,7 +23,7 @@ export default async function Home() {
 
         <section>
           <div className="grid gap-16 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {blogs.data.map((b: any) => (
+            {blogs?.data?.map((b: any) => (
               <Blog {...b} key={b.id} />
             ))}
           </div>

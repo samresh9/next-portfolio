@@ -7,7 +7,7 @@ export default async function BlogsPage() {
   if(blogs.error){
     throw new Error("The blog is currently on a break. We'll be back soon with fresh content and insightful discussions.")
   }
-  console.log(blogs)
+  
   return (
     <>
       <Container>

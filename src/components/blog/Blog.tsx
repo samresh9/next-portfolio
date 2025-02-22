@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Blog(blogData: any) {
   const { attributes: blog } = blogData;
-  const { url, alternativeText, formats } = blog?.imgUrl.data.attributes ?? {};
-  const { width, height } = formats?.medium ?? formats.small;
+  const { url, alternativeText, formats } = blog?.imgUrl?.data?.attributes ?? {};
+  const { width, height } = formats?.small ?? formats.medium;
   return (
     <>
       <Link href={`/blog/${blog?.slug || ""}`}>

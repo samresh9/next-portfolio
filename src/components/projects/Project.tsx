@@ -15,7 +15,7 @@ export default function Project(projectData: ExtendedProjectProps) {
   const { name, description, liveUrl, sourceCodeUrl } = attributes;
   const { url, alternativeText, formats } =
     attributes.projectImage.data?.attributes;
-  const { height, width } = formats?.medium || formats?.small;
+  const { height = 200, width = 500 } = formats?.medium || formats?.small || {};
   return (
     <>
       <Card
@@ -52,7 +52,9 @@ export default function Project(projectData: ExtendedProjectProps) {
           <div className="flex gap-1">
             <Link
               href={liveUrl}
-              className="w-28 py-3 rounded-md text-tiny text-white bg-zinc-900 dark:bg-black/10 border border-transparent dark:border-teal-400/5 flex items-center justify-center"
+              className={`w-28 py-3 rounded-md text-tiny text-white bg-zinc-900 dark:bg-black/10 border border-transparent dark:border-teal-400/5 flex items-center justify-center ${
+                !liveUrl ? `cursor-not-allowed` : ""
+              }`}
               target="_blank"
               rel="noopener noreferrer"
             >
