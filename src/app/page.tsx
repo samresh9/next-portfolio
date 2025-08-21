@@ -4,6 +4,7 @@ import { getBlogs, getProjects } from "@/strapi/serverCall";
 import Projects from "@/components/projects/Projects";
 import { ProjectDataProps } from "@/types/projectType";
 import Blog from "@/components/blog/Blog";
+import ChatWidget from "@/components/chat/ChatWidget";
 
 export default async function Home() {
   const projects: { data: ProjectDataProps[] } = await getProjects();
@@ -12,13 +13,14 @@ export default async function Home() {
     <>
       <Container>
         <Showcase />
+        <ChatWidget />
         <h2 className="text-3xl mb-12 font-mono tracking-wide">
           Personal Projects
         </h2>
         <Projects projects={projects} />
 
         <h2 className="text-3xl mb-12 font-mono tracking-wide mt-20">
-           Articles
+          Articles
         </h2>
 
         <section>
